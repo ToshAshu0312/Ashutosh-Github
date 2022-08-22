@@ -9,9 +9,8 @@ terraform {
 }
 
 provider "aws" {
-    region= "ap-south-1"
-    access_key= "AKIA5WOJ4WIDHXTAPDVO"
-    secret_key= "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"
+    region  = "ap-south-1"
+    profile = "default"
 }
 
 resource "aws_instance" "myec2" {
@@ -33,5 +32,5 @@ output "ID" {
 
 output "TEXT_FILE" {
 
-  value = file("${path.module}/hello.txt")
+  value = file("${path.module}/sample1.txt")
 }
