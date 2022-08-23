@@ -1,1 +1,1 @@
-automatic-deploy part1
+automatic-deploy part
