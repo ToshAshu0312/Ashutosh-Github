@@ -25,7 +25,7 @@ resource "aws_instance" "myec2" {
   connection {
     type        = "ssh"
     user        = "ec2-user"
-    private_key = file("./terraform-key.pem")
+    private_key = file("C:\ProgramData\Jenkins\.jenkins\terraform-key.pem")
     host        = aws_instance.myec2.public_ip
   }
 
