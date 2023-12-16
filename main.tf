@@ -4,7 +4,7 @@ terraform {
     aws = {
 
       source  = "hashicorp/aws"
-      version = " ~>4.0 "
+      version = " ~>5.0 "
     }
   }
 }
@@ -26,7 +26,7 @@ resource "aws_instance" "myec2" {
   connection {
     type        = "ssh"
     user        = "ec2-user"
-    private_key = file("C:/Users/ashut/Desktop/Terraform-learning/New_terraform/Terraform-key.pem")
+    private_key = file("C:/Terraform/Terraform-key.pem")
     host        = aws_instance.myec2.public_ip
   }
 
