@@ -10,7 +10,7 @@ resource "aws_security_group" "demo" {
     cidr_blocks = ["0.0.0.0/0"]
  }   
 */
-dynamic "ingress" {
+  dynamic "ingress" {
     for_each = var.ports
     content {
       from_port   = ingress.value
@@ -28,5 +28,5 @@ dynamic "ingress" {
       cidr_blocks = ["0.0.0.0/0"]
     }
   }
-  
+
 }

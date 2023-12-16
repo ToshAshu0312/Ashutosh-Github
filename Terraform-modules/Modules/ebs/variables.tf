@@ -1,5 +1,5 @@
 variable "az" {
-    default = "ap-south-1a"
+    default = "ap-south-1b"
 }
 
 variable "type" {

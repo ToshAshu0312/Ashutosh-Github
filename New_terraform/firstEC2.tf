@@ -1,7 +1,7 @@
 resource "aws_instance" "myec2" {
   ami           = data.aws_ami.latest.id
   instance_type = var.type[0]
-  key_name      = "Terraform-key"
+  key_name      = "terraform-key"
   #  count                  = 1
   vpc_security_group_ids = [aws_security_group.demo.id]
   #   tags =  {
@@ -18,7 +18,7 @@ resource "aws_instance" "myec2" {
   connection {
     type        = "ssh"
     user        = "ec2-user"
-    private_key = file("C:/Users/ashut/Desktop/Terraform-learning/New_terraform/Terraform-key.pem")
+    private_key = file("C:/Users/ashut/Desktop/Terraform-learning/New_terraform/terraform-key.pem")
     host        = aws_instance.myec2.public_ip
   }
   provisioner "remote-exec" {

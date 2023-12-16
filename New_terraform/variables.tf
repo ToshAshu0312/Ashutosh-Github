@@ -13,5 +13,5 @@ variable "region" {
 }
 
 variable "ports" {
-  type    = list(any)
+  type = list(any)
 }
