@@ -18,7 +18,6 @@ resource "aws_instance" "myec2" {
   ami           = "ami-076e3a557efe1aa9c"
   instance_type = var.instance_type
   key_name = "terraform-key"
-  count = 1
 
   tags = {
     name = "Sample"
@@ -28,7 +27,7 @@ resource "aws_instance" "myec2" {
     type        = "ssh"
     user        = "ec2-user"
     private_key = file("C:/ProgramData/Jenkins/.jenkins/workspace/Terraform-learning/terraform-key.pem")
-    host        = aws_instance.myec2.public_ip[count.index]
+    host        = aws_instance.myec2.public_ip
   }
 
   provisioner "remote-exec" {
