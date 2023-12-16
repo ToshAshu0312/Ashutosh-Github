@@ -17,7 +17,7 @@ provider "aws" {
 resource "aws_instance" "myec2" {
   ami           = "ami-076e3a557efe1aa9c"
   instance_type = var.instance_type
-  key_name = "terraform-key"
+  key_name = "Terraform-key"
 
   tags = {
     name = "Sample"
