@@ -8,7 +8,7 @@ resource "aws_security_group" "demo" {
     content {
       from_port   = ingress.value
       to_port     = ingress.value
-      protocol    = "-1"
+      protocol    = "tcp"
       cidr_blocks = ["0.0.0.0/0"]
     }
   }
@@ -17,7 +17,7 @@ resource "aws_security_group" "demo" {
     content {
       from_port   = egress.value
       to_port     = egress.value
-      protocol    = "-1"
+      protocol    = "tcp"
       cidr_blocks = ["0.0.0.0/0"]
     }
   }
