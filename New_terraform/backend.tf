@@ -16,5 +16,3 @@ terraform {
 provider "aws" {
   region = "ap-south-1"
 }
-
-https://www.youtube.com/watch?v=zMrmookuRQw
